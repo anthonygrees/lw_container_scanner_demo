@@ -7,6 +7,7 @@ jobs:
     steps:
       - name: Hello world action step
         id: hello_reesy
+        image_name: hello_reesy
         uses: anthonygrees/lw_container_scanner_demo@v1
         with:
           who-to-greet: 'Mona the Octocat'
@@ -20,7 +21,7 @@ jobs:
           LW_ACCOUNT_NAME: ${{ secrets.LW_ACCOUNT_NAME }} 
           LW_ACCESS_TOKEN: ${{ secrets.LW_ACCESS_TOKEN }}
         with:
-          image_name: ${{ github.run_id }}
+          image_name: ${{ github.image_name }}
           image_tag: latest
           fail_if_critical_vulnerabilities_found: true
           fail_only_if_vulnerabilities_fixable: true
