@@ -20,6 +20,21 @@ Create a `New` and choose a `Registry Type` of `Inline Scanner`.  You cannot use
 This version uses a GitHub action that is published to provide the LW Scanner   
 `timarenz/lw-scanner-action@main`  
   
+You will need to add the following `step` to your GitHub Actions workflow:  
+```yml
+      - name: Scan container images for vulnerabitilies using Lacework
+        uses: timarenz/lw-scanner-action@main
+        env:
+          LW_ACCOUNT_NAME: ${{ secrets.LW_ACCOUNT_NAME }} 
+          LW_ACCESS_TOKEN: ${{ secrets.LW_ACCESS_TOKEN }}
+        with:
+          image_name: uzyexe/pacman
+          image_tag: latest
+          fail_if_critical_vulnerabilities_found: true
+          fail_only_if_vulnerabilities_fixable: true
+          save_build_report: true
+```
+  
 ### Lacework Vulnerability Report
 Once the GitHub action flow is complete, you will see the container scan report in Lacework.  Under `Vulnerabilities` -> `Container` select the `remote_scanner` in the drop-down menu at the top.  
   
