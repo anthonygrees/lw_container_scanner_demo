@@ -21,15 +21,13 @@ jobs:
         path: ./.github/actions/lw-scanner-action
 
       - name: Scan container images for vulnerabitilies using Lacework
-        uses: ./.github/actions/lw-scanner-action
-        #     uses: timarenz/lw-scanner-action@v0.2.1
-      env:
-        LW_ACCOUNT_NAME: ${{ secrets.LW_ACCOUNT_NAME }} 
-        LW_ACCESS_TOKEN: ${{ secrets.LW_ACCESS_TOKEN }}
-        LW_SCANNER_SCAN_LIBRARY_PACKAGES: true
-      with:
-        image_name: hello_reesy
-        image_tag: latest
-        fail_if_critical_vulnerabilities_found: true
-        fail_only_if_vulnerabilities_fixable: true
-        save_build_report: true
+        uses: timarenz/lw-scanner-action:v0.0.1
+        env:
+          LW_ACCOUNT_NAME: ${{ secrets.LW_ACCOUNT_NAME }} 
+          LW_ACCESS_TOKEN: ${{ secrets.LW_ACCESS_TOKEN }}
+        with:
+          image_name: hello_reesy
+          image_tag: latest
+          fail_if_critical_vulnerabilities_found: true
+          fail_only_if_vulnerabilities_fixable: true
+          save_build_report: true
