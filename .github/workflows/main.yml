@@ -20,10 +20,9 @@ jobs:
         ref: refs/heads/main
         path: ./.github/actions/lw-scanner-action
 
-      - 
-      uses: ./.github/actions/lw-scanner-action
-      name: Scan container images for vulnerabitilies using Lacework
-      #     uses: timarenz/lw-scanner-action@v0.2.1
+      - name: Scan container images for vulnerabitilies using Lacework
+        uses: ./.github/actions/lw-scanner-action
+        #     uses: timarenz/lw-scanner-action@v0.2.1
       env:
         LW_ACCOUNT_NAME: ${{ secrets.LW_ACCOUNT_NAME }} 
         LW_ACCESS_TOKEN: ${{ secrets.LW_ACCESS_TOKEN }}
