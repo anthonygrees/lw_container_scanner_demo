@@ -9,6 +9,10 @@ It required two inputs as GitHub Secrets:
 - secrets.LW_ACCOUNT_NAME
 - secrets.LW_ACCESS_TOKEN
   
+In your GitHub repo, go into `Settings` -> `Secrets` and create Repository Secrets as follows.  They are encrypted by default.
+  
+![Secrets](/images/lw_sec.png)
+
 ### Integration and Token
 In the Lacework UI, se;ect `Settings` -> `Account Settings` -> `Integrations` -> `Container Registries`   
   
