@@ -17,8 +17,7 @@ jobs:
       - name: Pull Container
         shell: bash
         run: |
-#          docker pull nginx:latest 
-           docker pull uzyexe/pacman
+            docker pull uzyexe/pacman
       - name: Scan container images for vulnerabitilies using Lacework
         uses: timarenz/lw-scanner-action@main
         env:
