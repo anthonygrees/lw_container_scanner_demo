@@ -13,7 +13,7 @@ jobs:
         # Use the output from the `hello` step
       - name: Get the output time
         run: echo "The time was ${{ steps.hello.outputs.time }}"
-        # Run scanner
+        # Run scanner again
       - name: Scan container images for vulnerabitilies using Lacework
         uses: timarenz/lw-scanner-action@main
         env:
