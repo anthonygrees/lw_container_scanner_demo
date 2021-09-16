@@ -15,7 +15,7 @@ jobs:
         run: echo "The time was ${{ steps.hello.outputs.time }}"
         # Run scanner
       - name: Scan container images for vulnerabitilies using Lacework
-        uses: timarenz/lw-scanner-action:v0.0.1
+        uses: timarenz/lw-scanner-action@main
         env:
           LW_ACCOUNT_NAME: ${{ secrets.LW_ACCOUNT_NAME }} 
           LW_ACCESS_TOKEN: ${{ secrets.LW_ACCESS_TOKEN }}
