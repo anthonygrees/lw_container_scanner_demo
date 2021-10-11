@@ -24,6 +24,8 @@ Create a `New` and choose a `Registry Type` of `Inline Scanner`.  You cannot use
 This version uses a GitHub action that is published to provide the LW Scanner   
 `timarenz/lw-scanner-action@main`  
   
+The code to make a CI/CD pipeline work is [here.](https://github.com/timarenz/lw-scanner-action/blob/main/docker-entrypoint.sh)
+  
 You will need to add the following `step` to your GitHub Actions workflow:  
 ```yml
       - name: Scan container images for vulnerabitilies using Lacework
