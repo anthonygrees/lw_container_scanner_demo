@@ -11,7 +11,7 @@ jobs:
             docker pull uzyexe/pacman
       - name: Scan container images for vulnerabitilies using Lacework
         uses: timarenz/lw-scanner-action@main
-        continue-on-error: true
+        continue-on-error: false
         with:
           LW_ACCOUNT_NAME: ${{ secrets.LW_ACCOUNT_NAME }} 
           LW_ACCESS_TOKEN: ${{ secrets.LW_ACCESS_TOKEN }}
