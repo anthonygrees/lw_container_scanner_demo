@@ -24,4 +24,4 @@ jobs:
 
       - name: Check if vulnerabilites were found and step failed.
         if: steps.lw-scanner.outcome == 'failure'
-        run: echo "Vulnerabilities found and step failed succesfully." && exit 99
+        run: echo "Vulnerabilities found and step failed succesfully." && exit 0
