@@ -5,10 +5,10 @@ jobs:
     runs-on: ubuntu-latest
     name: GitHub Action for LW Scanner
     steps:
-      - name: Pull The PacMan Container
+      - name: Pull Log4J Vul Container
         shell: bash
         run: |
-            docker pull uzyexe/pacman
+            docker pull ghcr.io/christophetd/log4shell-vulnerable-app:latest
       - name: Scan container images for vulnerabitilies using Lacework
         uses: timarenz/lw-scanner-action@main
         continue-on-error: false
