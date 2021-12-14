@@ -8,7 +8,7 @@ jobs:
       - name: Pull Log4J Vul Container
         shell: bash
         run: |
-            docker uzyexe/pacman
+            docker pull uzyexe/pacman
       - name: Scan container images for vulnerabitilies using Lacework
         uses: timarenz/lw-scanner-action@main
         continue-on-error: false
