@@ -16,7 +16,7 @@ jobs:
           LW_ACCOUNT_NAME: ${{ secrets.LW_ACCOUNT_NAME }} 
           LW_ACCESS_TOKEN: ${{ secrets.LW_ACCESS_TOKEN }}
           SAVE_BUILD_REPORT: true
-          image_name: ghcr.io/christophetd/log4shell-vulnerable-app:latest
+          image_name: log4shell-vulnerable-app:latest
           image_tag: latest
           BUILD_REPORT_FILE_NAME: report.html
           FAIL_BUILD: true
