@@ -1,4 +1,4 @@
-# Lacework Inline Scanner GitHub Actions Container Demo..
+# Lacework Inline Scanner GitHub Actions Container Demo.
 GitHub Actions demo for Lacework Inline Scanner.
   
 ### About
