@@ -19,7 +19,7 @@ jobs:
           image_name: uzyexe/pacman
           image_tag: latest
           BUILD_REPORT_FILE_NAME: report.html
-#          FAIL_BUILD: true
+##          FAIL_BUILD: true
 #          SEVERITY_THRESHOLD: fixable
 
 #      - name: Check if vulnerabilites were found and step failed.
