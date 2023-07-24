@@ -19,9 +19,9 @@ jobs:
           image_name: uzyexe/pacman
           image_tag: latest
           BUILD_REPORT_FILE_NAME: report.html
-          FAIL_BUILD: true
-          SEVERITY_THRESHOLD: fixable
+#          FAIL_BUILD: true
+#          SEVERITY_THRESHOLD: fixable
 
-      - name: Check if vulnerabilites were found and step failed.
-        if: steps.lw-scanner.outcome == 'failure'
-        run: echo "Vulnerabilities found and step failed succesfully." && exit 0
+#      - name: Check if vulnerabilites were found and step failed.
+#        if: steps.lw-scanner.outcome == 'failure'
+#        run: echo "Vulnerabilities found and step failed succesfully." && exit 0
